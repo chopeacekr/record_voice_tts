@@ -1,5 +1,5 @@
 import streamlit as st
-from AudioRecorder import AudioRecorder
+from audiorecorder import audiorecorder
 from tempfile import NamedTemporaryFile
 import librosa
 import base64
@@ -97,7 +97,7 @@ with st.sidebar:
 
 st.subheader("Record your voice message")
 
-audio = AudioRecorder("녹음시작", "녹음정지")
+audio = audiorecorder("녹음시작", "녹음정지")
 
 if len(audio) > 0:
     st.success("Recording complete!")
